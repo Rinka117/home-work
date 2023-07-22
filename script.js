@@ -8,9 +8,11 @@ const playRound = () => {
 
     const userAnswer = +prompt(`Чему равно ${numberOne} + ${numberTwo} ?`);
 
-    const amount = (numberOne, numberTwo) => numberOne + numberTwo;
+    const sum = numberOne + numberTwo;
+    // const amount = (numberOne, numberTwo) => numberOne + numberTwo;
+    // const sum = amount(numberOne, numberTwo);
 
-    if (userAnswer === amount) {
+    if (userAnswer === sum) {
         alert('Верно!');
         return true
     } else {
@@ -20,7 +22,7 @@ const playRound = () => {
 }
 
 const playGame = (rounds) => {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < rounds; i++) {
         const isCorrect = playRound();
 
         if (!isCorrect) {
