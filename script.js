@@ -6,11 +6,10 @@ const playRound = () => {
     const numberOne = getNumber();
     const numberTwo = getNumber();
 
-    const userAnswer = +prompt(`Чему равно ${numberOne} + ${numberTwo} ?`);
+    const userAnswer = Number(prompt(`Чему равно ${numberOne} + ${numberTwo} ?`));
 
     const sum = numberOne + numberTwo;
-    // const amount = (numberOne, numberTwo) => numberOne + numberTwo;
-    // const sum = amount(numberOne, numberTwo);
+
 
     if (userAnswer === sum) {
         alert('Верно!');
